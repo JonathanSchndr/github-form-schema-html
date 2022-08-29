@@ -1,4 +1,4 @@
-[![nuxt-directus](https://nuxt-directus.netlify.app/cover.png)](https://nuxt-directus.netlify.app/)
+![GitHub Form Schema HTML](./banner.jpg)
 
 # GitHub Form Schema HTML
 

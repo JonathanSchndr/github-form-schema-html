@@ -5,7 +5,6 @@
   "description": "Interpret the Syntax for GitHub's form schema and export a html form.",
   "files": [
     "dist",
-    "docs",
     "example"
   ],
   "main": "./dist/github-form-schema-html.es.mjs",
