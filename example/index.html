@@ -4,17 +4,26 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Example: GitHub Form Schema HTML</title>
+  <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" />
 </head>
 <body>
 
-  <div id="form"></div>
+  <div class="container p-2">
+    <form>
+      <div id="load"></div>
+      <button class="btn" type="submit">Submit</button>
+    </form>
+  </div>
 
   <script type="module">
     import { GitHubFormSchemaHtml } from '../dist/github-form-schema-html.mjs';
 
     document.addEventListener('DOMContentLoaded', () => {
-      console.log("READY");
-      new GitHubFormSchemaHtml({ ymlPath: './form.yml', selector: '#form' }).render();
+      fetch('./form.yml').then(res => res.text()).then(rawYml => {
+        document.getElementById('load').innerHTML = new GitHubFormSchemaHtml({ yml: { data: rawYml } }).render();
+      }).catch(err => {
+        console.log(err);
+      });
     })
   </script>
 </body>

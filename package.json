@@ -15,21 +15,23 @@
       "import": "./dist/github-form-schema-html.es.mjs"
     }
   },
-  "types": "dist/github-form-schema-html.d.ts",
+  "types": "./dist/github-form-schema-html.d.ts",
   "scripts": {
     "serve": "vite",
     "build": "vite build",
     "build:watch": "vite build --watch"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Jonathan Schneider",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/JonathanSchndr/github-form-schema-html/issues"
   },
   "homepage": "https://github.com/JonathanSchndr/github-form-schema-html#readme",
   "dependencies": {
     "@types/js-yaml": "^4.0.5",
-    "js-yaml": "^4.1.0"
+    "@types/markdown-it": "^12.2.3",
+    "js-yaml": "^4.1.0",
+    "markdown-it": "^13.0.1"
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.9",

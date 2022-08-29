@@ -1,11 +1,11 @@
 import dts from 'vite-plugin-dts';
 
 export default {
-  mode: 'development',
+  mode: 'production',
   root: './',
   build: {
-    // minify: false,
-    sourcemap: true,
+    minify: true,
+    sourcemap: false,
     emptyOutDir: false,
     lib: {
       formats: ['es'],
