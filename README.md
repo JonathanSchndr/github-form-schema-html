@@ -4,16 +4,22 @@
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
-[![Github Actions CI][github-actions-ci-src]][github-actions-ci-href]
-[![Codecov][codecov-src]][codecov-href]
 [![License][license-src]][license-href]
 
-> Directus Module for [Nuxt 3](https://v3.nuxtjs.org)
+> GitHub Form Schema HTML for [GitHub's form schema](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema)
 
 - [✨ &nbsp;Release Notes](https://github.com/JonathanSchndr/github-form-schema-html/releases)
 
 ## Features
 
+GitHub Form Schema HTML convert your GitHub Issue Template in a real HTML Form. [(Schema)](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema)
+
+- Supported Types:
+  - Markdown
+  - Textarea
+  - Input
+  - Dropdown
+  - Checkboxes
 - [Primer CSS](https://primer.style/) support
 - TypeScript Support
 
@@ -27,7 +33,7 @@ npm i github-form-schema-html # npm
 
 ## Basic usage
 
-[Live Example](https://github.com/JonathanSchndr/github-form-schema-html/tree/main/example)
+[Demo](https://github.com/JonathanSchndr/github-form-schema-html/tree/main/example)
 
 ```html
 <form>
@@ -38,7 +44,7 @@ npm i github-form-schema-html # npm
 
 ```javascript
 // basic
-document.getElementById('load').innerHTML = new GitHubFormSchemaHtml({ yml: { data: rawYml } }).render();
+document.getElementById('load').innerHTML = new GitHubFormSchemaHtml({ yml: { data: rawYml, data } }).render();
 
 // with fetch (optional, if yml content need loaded before)
 import { GitHubFormSchemaHtml } from 'github-form-schema-html';
@@ -65,9 +71,5 @@ Copyright (c) 2022 Jonathan Schneider
 [npm-version-href]: https://npmjs.com/package/github-form-schema-html
 [npm-downloads-src]: https://img.shields.io/npm/dt/github-form-schema-html.svg
 [npm-downloads-href]: https://npmjs.com/package/github-form-schema-html
-[github-actions-ci-src]: https://github.com/JonathanSchndr/github-form-schema-html/actions/workflows/ci.yml/badge.svg
-[github-actions-ci-href]: https://github.com/JonathanSchndr/github-form-schema-html/actions?query=workflow%3Aci
-[codecov-src]: https://img.shields.io/codecov/c/github/JonathanSchndr/github-form-schema-html.svg
-[codecov-href]: https://codecov.io/gh/JonathanSchndr/github-form-schema-html
 [license-src]: https://img.shields.io/npm/l/github-form-schema-html.svg
 [license-href]: https://npmjs.com/package/github-form-schema-html

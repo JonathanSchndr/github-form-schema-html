@@ -1,8 +1,8 @@
 {
   "name": "github-form-schema-html",
   "repository": "git://github.com/JonathanSchndr/github-form-schema-html.git",
-  "version": "0.0.1",
-  "description": "this repo interprete the github-form-yaml and export a html form",
+  "version": "1.0.0",
+  "description": "Interpret the Syntax for GitHub's form schema and export a html form.",
   "files": [
     "dist",
     "docs",
