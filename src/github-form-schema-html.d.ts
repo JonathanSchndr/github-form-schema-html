@@ -1,8 +1,5 @@
 export interface Options {
-  yml: {
-    data: string;
-    options?: {}
-  }
+  yml: string
 }
 
 export interface Form {

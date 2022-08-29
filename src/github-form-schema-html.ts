@@ -86,7 +86,7 @@ export class GitHubFormSchemaHtml {
   }
 
   render () {
-    const ymlParsed = yaml.load(this.options.yml?.data, this.options.yml?.options) as Form[];
+    const ymlParsed = yaml.load(this.options.yml) as Form[];
 
     let htmlExport: string = '';
     for (const element of ymlParsed) {

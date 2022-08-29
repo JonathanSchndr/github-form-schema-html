@@ -20,7 +20,7 @@
 
     document.addEventListener('DOMContentLoaded', () => {
       fetch('./form.yml').then(res => res.text()).then(rawYml => {
-        document.getElementById('load').innerHTML = new GitHubFormSchemaHtml({ yml: { data: rawYml } }).render();
+        document.getElementById('load').innerHTML = new GitHubFormSchemaHtml({ yml: rawYml }).render();
       }).catch(err => {
         console.log(err);
       });

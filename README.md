@@ -9,6 +9,7 @@
 > GitHub Form Schema HTML for [GitHub's form schema](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema)
 
 - [✨ &nbsp;Release Notes](https://github.com/JonathanSchndr/github-form-schema-html/releases)
+- [🔴 Demo](https://github.com/JonathanSchndr/github-form-schema-html/tree/main/example)
 
 ## Features
 
@@ -33,8 +34,6 @@ npm i github-form-schema-html # npm
 
 ## Basic usage
 
-[Demo](https://github.com/JonathanSchndr/github-form-schema-html/tree/main/example)
-
 ```html
 <form>
   <div id="load"></div>
@@ -44,12 +43,12 @@ npm i github-form-schema-html # npm
 
 ```javascript
 // basic
-document.getElementById('load').innerHTML = new GitHubFormSchemaHtml({ yml: { data: rawYml, data } }).render();
+document.getElementById('load').innerHTML = new GitHubFormSchemaHtml({ yml: rawYml }).render();
 
 // with fetch (optional, if yml content need loaded before)
 import { GitHubFormSchemaHtml } from 'github-form-schema-html';
 fetch('./form.yml').then(res => res.text()).then(rawYml => {
-  document.getElementById('load').innerHTML = new GitHubFormSchemaHtml({ yml: { data: rawYml } }).render();
+  document.getElementById('load').innerHTML = new GitHubFormSchemaHtml({ yml: rawYml }).render();
 })
 ```
 
