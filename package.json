@@ -7,14 +7,12 @@
     "dist",
     "example"
   ],
-  "main": "./dist/github-form-schema-html.es.mjs",
-  "module": "./dist/github-form-schema-html.es.mjs",
   "exports": {
     ".": {
-      "import": "./dist/github-form-schema-html.es.mjs"
+      "import": "./dist/github-form-schema-html.mjs",
+      "types": "./dist/github-form-schema-html.d.ts"
     }
   },
-  "types": "./dist/github-form-schema-html.d.ts",
   "scripts": {
     "serve": "vite",
     "build": "vite build",
