@@ -42,11 +42,12 @@ npm i github-form-schema-html # npm
 ```
 
 ```javascript
+import { GitHubFormSchemaHtml } from 'github-form-schema-html';
+
 // basic
 document.getElementById('load').innerHTML = new GitHubFormSchemaHtml({ yml: rawYml }).render();
 
 // with fetch (optional, if yml content need loaded before)
-import { GitHubFormSchemaHtml } from 'github-form-schema-html';
 fetch('./form.yml').then(res => res.text()).then(rawYml => {
   document.getElementById('load').innerHTML = new GitHubFormSchemaHtml({ yml: rawYml }).render();
 })
