@@ -1,7 +1,7 @@
 {
   "name": "github-form-schema-html",
   "repository": "git://github.com/JonathanSchndr/github-form-schema-html.git",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Interpret the Syntax for GitHub's form schema and export a html form.",
   "files": [
     "dist",

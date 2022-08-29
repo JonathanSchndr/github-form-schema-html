@@ -16,21 +16,21 @@ import {
 export class GitHubFormSchemaHtml {
   options: Options;
   #elementRender: {
-    markdown: (attributes: MarkdownAttributes) => string;
-    textarea: (attributes: TextareaAttributes, validations: TextareaValidations) => string;
-    input: (attributes: InputAttributes, validations: InputValidations) => string;
-    dropdown: (attributes: DropdownAttributes, validations: DropdownValidations) => string;
-    checkboxes: (attributes: CheckboxesAttributes) => string;
+    markdown: (...args: any[]) => string;
+    textarea: (...args: any[]) => string;
+    input: (...args: any[]) => string;
+    dropdown: (...args: any[]) => string;
+    checkboxes: (...args: any[]) => string;
   };
 
   constructor(options: Options) {
     this.options = options;
 
     this.#elementRender = {
-      markdown(attributes: MarkdownAttributes): string {
+      markdown(attributes: MarkdownAttributes) {
         return `<div class="markdown-body">${md().render(attributes.value)}</div>`
       },
-      textarea(attributes: TextareaAttributes, validations: TextareaValidations): string {
+      textarea(attributes: TextareaAttributes, validations: TextareaValidations) {
         return `
           <div class="form-group">
             <div class="form-group-header">
@@ -43,7 +43,7 @@ export class GitHubFormSchemaHtml {
           </div>
         `
       },
-      input(attributes: InputAttributes, validations: InputValidations): string {
+      input(attributes: InputAttributes, validations: InputValidations) {
         return `
           <div class="form-group">
             <div class="form-group-header">
@@ -56,7 +56,7 @@ export class GitHubFormSchemaHtml {
           </div>
         `
       },
-      dropdown(attributes: DropdownAttributes, validations: DropdownValidations): string {
+      dropdown(attributes: DropdownAttributes, validations: DropdownValidations) {
         return `
           <div class="form-group">
             <div class="form-group-header">
@@ -71,7 +71,7 @@ export class GitHubFormSchemaHtml {
           </div>
         `
       },
-      checkboxes(attributes: CheckboxesAttributes): string {
+      checkboxes(attributes: CheckboxesAttributes) {
         return `
           <div class="form-group">
             <div class="form-group-header">
@@ -85,12 +85,11 @@ export class GitHubFormSchemaHtml {
     }
   }
 
-  render () {
+  render (): string {
     const ymlParsed = yaml.load(this.options.yml) as Form[];
 
     let htmlExport: string = '';
     for (const element of ymlParsed) {
-      console.log(element, this.#elementRender);
       htmlExport += this.#elementRender[element.type](element.attributes, element?.validations);
     }
 
