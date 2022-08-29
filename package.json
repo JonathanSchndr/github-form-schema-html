@@ -1,0 +1,41 @@
+{
+  "name": "github-form-schema-html",
+  "repository": "git://github.com/JonathanSchndr/github-form-schema-html.git",
+  "version": "0.0.1",
+  "description": "this repo interprete the github-form-yaml and export a html form",
+  "files": [
+    "dist",
+    "docs",
+    "example"
+  ],
+  "main": "./dist/github-form-schema-html.es.mjs",
+  "module": "./dist/github-form-schema-html.es.mjs",
+  "exports": {
+    ".": {
+      "import": "./dist/github-form-schema-html.es.mjs"
+    }
+  },
+  "types": "dist/github-form-schema-html.d.ts",
+  "scripts": {
+    "serve": "vite",
+    "build": "vite build",
+    "build:watch": "vite build --watch"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JonathanSchndr/github-form-schema-html/issues"
+  },
+  "homepage": "https://github.com/JonathanSchndr/github-form-schema-html#readme",
+  "dependencies": {
+    "@types/js-yaml": "^4.0.5",
+    "js-yaml": "^4.1.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "^7.18.9",
+    "eslint": "^8.23.0",
+    "typescript": "^4.8.2",
+    "vite": "^3.0.9",
+    "vite-plugin-dts": "^1.4.1"
+  }
+}

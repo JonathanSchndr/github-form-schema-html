@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example: GitHub Form Schema HTML</title>
+</head>
+<body>
+
+  <div id="form"></div>
+
+  <script type="module">
+    import { GitHubFormSchemaHtml } from '../dist/github-form-schema-html.mjs';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log("READY");
+      new GitHubFormSchemaHtml({ ymlPath: './form.yml', selector: '#form' }).render();
+    })
+  </script>
+</body>
+</html>
