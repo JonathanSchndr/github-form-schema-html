@@ -9,7 +9,7 @@
 > GitHub Form Schema HTML for [GitHub's form schema](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/syntax-for-githubs-form-schema)
 
 - [✨ &nbsp;Release Notes](https://github.com/JonathanSchndr/github-form-schema-html/releases)
-- [🔴 Demo](https://github.com/JonathanSchndr/github-form-schema-html/tree/main/example)
+- [🔴 Demo](https://codesandbox.io/s/example-github-form-schema-html-7khslb)
 
 ## Features
 
