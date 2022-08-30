@@ -22,7 +22,7 @@ GitHub Form Schema HTML convert your GitHub Issue Template in a real HTML Form. 
   - Dropdown
   - Checkboxes
 - [Primer CSS](https://primer.style/) support
-- TypeScript Support
+- TypeScript support
 
 
 ## Setup
