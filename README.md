@@ -58,7 +58,7 @@ fetch('./form.yml').then(res => res.text()).then(rawYml => {
 1. Clone this repository
 2. Install dependencies using `yarn install` or `npm install`
 3. Change vite.confg.js to `mode:'development'` / `minify:false` / `sourcemap:true`
-4. Start development server using `yarn dev && yarn build:watch` or `npm run dev && npm run build:watch`
+4. Start development server using `yarn dev` or `npm run dev`
 
 ## License
 
