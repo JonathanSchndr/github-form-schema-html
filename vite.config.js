@@ -8,9 +8,9 @@ export default {
     sourcemap: false,
     emptyOutDir: false,
     lib: {
-      formats: ['es'],
+      formats: ['es', 'cjs', 'umd'],
       entry: './src/github-form-schema-html.ts',
-      name: 'GitHubFormSchemaHtml'
+      name: 'githubformschemahtml'
     },
   },
   server: {
