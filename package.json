@@ -1,16 +1,18 @@
 {
   "name": "github-form-schema-html",
   "repository": "git://github.com/JonathanSchndr/github-form-schema-html.git",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Interpret the Syntax for GitHub's form schema and export a html form.",
   "files": [
     "dist",
     "example"
   ],
+  "main": "./dist/github-form-schema-html.umd.js",
+  "types": "./dist/github-form-schema-html.d.ts",
   "exports": {
     ".": {
       "import": "./dist/github-form-schema-html.mjs",
-      "types": "./dist/github-form-schema-html.d.ts"
+      "require": "./dist/github-form-schema-html.js"
     }
   },
   "scripts": {
@@ -32,9 +34,9 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.18.9",
-    "eslint": "^8.23.0",
-    "typescript": "^4.8.2",
-    "vite": "^3.0.9",
-    "vite-plugin-dts": "^1.4.1"
+    "eslint": "^8.23.1",
+    "typescript": "^4.8.3",
+    "vite": "^3.1.0",
+    "vite-plugin-dts": "^1.5.0"
   }
 }
