@@ -16,7 +16,7 @@
     }
   },
   "scripts": {
-    "dev": "vite && vite build --watch",
+    "dev": "vite & vite build --watch",
     "serve": "vite",
     "build": "vite build"
   },
