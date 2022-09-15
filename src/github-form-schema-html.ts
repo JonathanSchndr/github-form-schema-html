@@ -11,6 +11,7 @@ import {
   DropdownAttributes,
   DropdownValidations,
   CheckboxesAttributes,
+  Custom
 } from './github-form-schema-html.d';
 
 export class GitHubFormSchemaHtml {
@@ -30,9 +31,9 @@ export class GitHubFormSchemaHtml {
       markdown(attributes: MarkdownAttributes) {
         return `<div class="markdown-body">${md().render(attributes.value)}</div>`
       },
-      textarea(attributes: TextareaAttributes, validations: TextareaValidations) {
+      textarea(attributes: TextareaAttributes, validations: TextareaValidations, custom?: Custom) {
         return `
-          <div class="form-group">
+          <div class="form-group ${custom?.classes}" id="${custom?.id}" ${custom?.attributes}>
             <div class="form-group-header">
               <label>${attributes.label}${validations.required ? ' <span>*</span>' : '' }</label>
               <p class="note">${attributes.description}</p>
@@ -43,9 +44,9 @@ export class GitHubFormSchemaHtml {
           </div>
         `
       },
-      input(attributes: InputAttributes, validations: InputValidations) {
+      input(attributes: InputAttributes, validations: InputValidations, custom?: Custom) {
         return `
-          <div class="form-group">
+          <div class="form-group" ${custom?.classes}" id="${custom?.id}" ${custom?.attributes}>
             <div class="form-group-header">
               <label>${attributes.label}${validations.required ? ' <span>*</span>' : '' }</label>
               <p class="note">${attributes.description}</p>
@@ -56,9 +57,9 @@ export class GitHubFormSchemaHtml {
           </div>
         `
       },
-      dropdown(attributes: DropdownAttributes, validations: DropdownValidations) {
+      dropdown(attributes: DropdownAttributes, validations: DropdownValidations, custom?: Custom) {
         return `
-          <div class="form-group">
+          <div class="form-group" ${custom?.classes}" id="${custom?.id}" ${custom?.attributes}>
             <div class="form-group-header">
               <label>${attributes.label}${validations.required ? ' <span>*</span>' : '' }</label>
               <p class="note">${attributes.description}</p>
@@ -90,7 +91,7 @@ export class GitHubFormSchemaHtml {
 
     let htmlExport: string = '';
     for (const element of ymlParsed) {
-      htmlExport += this.#elementRender[element.type](element.attributes, element?.validations);
+      htmlExport += this.#elementRender[element.type](element.attributes, element?.validations, element?.custom);
     }
 
     return htmlExport;

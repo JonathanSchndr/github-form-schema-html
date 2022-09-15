@@ -4,6 +4,10 @@
     description: What operating system are you using?
     placeholder: macOS Big Sur
     value: operating system
+  custom: 
+    id: testid
+    attributes: test="test" name="test"
+    classes: text-white border-gray-500
   validations:
     required: true
 - type: dropdown

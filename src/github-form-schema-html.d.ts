@@ -7,6 +7,7 @@ export interface Form {
   id?: string;
   attributes: MarkdownAttributes | TextareaAttributes | InputAttributes | DropdownAttributes | CheckboxesAttributes;
   validations?: TextareaValidations | InputValidations | DropdownValidations;
+  custom?: TextareaCustom 
 }
 
 export interface MarkdownAttributes {
@@ -23,6 +24,12 @@ export interface TextareaAttributes {
 
 export interface TextareaValidations {
   required?: boolean;
+}
+
+export interface TextareaCustom {
+  id?: string;
+  attributes?: string;
+  classes?: string;
 }
 
 export interface InputAttributes {
